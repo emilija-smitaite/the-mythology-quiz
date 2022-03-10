@@ -1,32 +1,15 @@
 //https://opentdb.com/api.php?amount=10&category=20&type=multiple
 
-//An asynchronous funtion to fetch data from the API
-async function loadQuestion() {
-    const APIUrl = "https://opentdb.com/api.php?amount=1&category=20&type=multiple";
-    const result = await fetch(`${APIUrl}`);
-    const data = await result.json();
-    console.log(data.results);
-}
+//---------------------Variables-------------------------
+const question = document.getElementById("question-area");
+let correctAnswer = "", correctAnswerCount = questionCount = 0, numberOfQuestions = 5;
+const option = document.querySelector(".option");
+console.log(option);
 
-loadQuestion();
-
+let unusedQuestions = [];
 
 //---------------------Event Listeners-------------------------
 let play = document.getElementById("play-button");
-
-//---------------------Variables-------------------------
-const question = document.getElementById("question-area");
-const option = Array.from(document.getElementsByClassName("option"));
-console.log(option);
-let questionCount = 0;
-let correctAnswerCount = 0;
-let unusedQuestions = [];
-//let aButton = document.getElementById("a-button");
-//let bButton = document.getElementById("b-button");
-//let cButton = document.getElementById("c-button");
-//let dButton = document.getElementById("d-button");
-
-
 //--------------------------Functions--------------------
 function startGame() {
 
@@ -34,11 +17,34 @@ function startGame() {
     
 }
 
-function displayQuestion() {
-    
+//An asynchronous funtion to fetch data from the API
+async function fetchQuestion() {
+    const APIUrl = "https://opentdb.com/api.php?amount=1&category=20&type=multiple";
+    const result = await fetch(`${APIUrl}`);
+    const data = await result.json();
+    //console.log(data.results);
+    displayQuestion(data.results[0]);
 }
 
+function displayQuestion(data) {
+    correctAnswer = data.correct_answer;
+    let incorrectAnswer = data.incorrect_answers;
+    let optionsList = incorrectAnswer;
+
+    //create a new array containing random incorrect answers and then correct answer is added
+    optionsList.splice(Math.floor(Math.random() * (incorrectAnswer.length + 1)), 0, correctAnswer);
+    
+    question.innerHTML = `${data.question}`;
+    option.innerHTML = `
+    ${optionsList.map((option, index) => `
+    <li>${index + 1}. <span> ${option} </span></li>`).join("")}
+    `;
+
+    
+}
+fetchQuestion();
 displayQuestion();
+
 function checkCorrectAnswer() {
 
 }
