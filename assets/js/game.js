@@ -83,7 +83,7 @@ function checkCorrectAnswer() {
             score++;
             outcome.innerHTML = `<p><i class = "fas fa-check"></i>Correct Answer!</p>`;
         } else {
-            outcome.innerHTML = `<p><i class = "fas fa-times"></i>Incorrect Answer!</p>`;
+            outcome.innerHTML = `<p><i class = "fas fa-times"></i>Incorrect Answer! <small><b>Correct answer: </b>${correctAnswer}</small></p>`;
         }
     }
 }
