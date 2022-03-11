@@ -6,6 +6,10 @@ const question = document.getElementById("question-area");
 const option = document.querySelector(".option");
 const _score = document.getElementById("score");
 const _questionsTotal = document.getElementById("questions-total");
+const checkAnswerButton = document.getElementById("check-answer-button");
+const playAgainButton = document.getElementById("play-again-button");
+const outcome = document.getElementById("outcome");
+
 let correctAnswer = "", score = questionsAsked = 0, questionsTotal = 5;
 
 
@@ -17,9 +21,15 @@ let correctAnswer = "", score = questionsAsked = 0, questionsTotal = 5;
 
 document.addEventListener("DOMContentLoaded", () => {
     fetchQuestion();
+    eventListeners();
     _questionsTotal.textContent = questionsTotal;
     _score.textContent = score;
 })
+
+function eventListeners() {
+    checkAnswerButton.addEventListener("click", checkCorrectAnswer);
+}
+
 
 //--------------------------Functions--------------------
 function startGame() {
@@ -66,7 +76,16 @@ function pickOption() {
 }
 
 function checkCorrectAnswer() {
-
+    checkAnswerButton.disabled = true;
+    if(option.querySelector(".selected")){
+        let pickedAnswer = option.querySelector(".selected").textContent;
+        if(pickedAnswer == correctAnswer){
+            score++;
+            outcome.innerHTML = `<p><i class = "fas fa-check"></i>Correct Answer!</p>`;
+        } else {
+            outcome.innerHTML = `<p><i class = "fas fa-times"></i>Incorrect Answer!</p>`;
+        }
+    }
 }
 
 function incrementScore() {
