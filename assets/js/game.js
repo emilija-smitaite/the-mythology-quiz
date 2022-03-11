@@ -53,7 +53,7 @@ function displayQuestion(data) {
     question.innerHTML = `${data.question}`;
     option.innerHTML = `
     ${optionsList.map((option, index) => `
-    <li>${index + 1}. <span> ${option} </span></li>`).join("")}
+    <li>${index + 1}. <span>${option}</span></li>`).join("")}
     `;
     pickOption();
 }
@@ -73,16 +73,20 @@ function pickOption() {
 function checkCorrectAnswer() {
     checkAnswerButton.disabled = true;
     if(option.querySelector(".selected")){
-        let pickedAnswer = option.querySelector(".selected").textContent;
+        let pickedAnswer = option.querySelector(".selected span").textContent;
+        console.log(correctAnswer);
+        console.log(pickedAnswer);
         if(pickedAnswer == correctAnswer){
             score++;
+            console.log(score);
             outcome.innerHTML = `<p><i class = "fas fa-check"></i>Correct Answer!</p>`;
         } else {
             outcome.innerHTML = `<p><i class = "fas fa-times"></i>Incorrect Answer! <p></p><small><b>Correct answer: </b>${correctAnswer}</small></p>`;
         }
-    }
+    } 
 }
 
-function incrementQuestionCount() {
-
-}
+/*function incrementQuestionCount() {
+    _questionsTotal.textContent = questionsTotal;
+    _score.textContent = score;
+}*/
