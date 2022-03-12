@@ -38,11 +38,13 @@ async function fetchQuestion() {
     const APIUrl = "https://opentdb.com/api.php?amount=1&category=20&type=multiple";
     const result = await fetch(`${APIUrl}`);
     const data = await result.json();
+    outcome.innerHTML = "";
     displayQuestion(data.results[0]);
 }
 
 //Taking API data and formatting it to display a question and answers
 function displayQuestion(data) {
+    checkAnswerButton.disabled = false;
     correctAnswer = data.correct_answer;
     let incorrectAnswer = data.incorrect_answers;
     let optionsList = incorrectAnswer;
@@ -74,19 +76,35 @@ function checkCorrectAnswer() {
     checkAnswerButton.disabled = true;
     if(option.querySelector(".selected")){
         let pickedAnswer = option.querySelector(".selected span").textContent;
-        console.log(correctAnswer);
-        console.log(pickedAnswer);
         if(pickedAnswer == correctAnswer){
             score++;
-            console.log(score);
             outcome.innerHTML = `<p><i class = "fas fa-check"></i>Correct Answer!</p>`;
         } else {
             outcome.innerHTML = `<p><i class = "fas fa-times"></i>Incorrect Answer! <p></p><small><b>Correct answer: </b>${correctAnswer}</small></p>`;
         }
-    } 
+        
+    } incrementQuestionCount();
 }
 
-/*function incrementQuestionCount() {
+function incrementQuestionCount() {
+    questionsAsked++;
+    console.log(questionsAsked);
+    console.log(questionsTotal);
+    editQuestionCount();
+    if(questionsAsked = questionsTotal) {
+
+    } else {
+        setTimeout(() => {
+            fetchQuestion();
+        }, 300);
+    }
+}
+
+function editQuestionCount() {
     _questionsTotal.textContent = questionsTotal;
     _score.textContent = score;
-}*/
+}
+
+
+
+
