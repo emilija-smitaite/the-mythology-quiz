@@ -4,8 +4,8 @@
 let play = document.getElementById("play-button");
 const question = document.getElementById("question-area");
 const option = document.querySelector(".option");
-const _score = document.getElementById("score");
-const _questionsTotal = document.getElementById("questions-total");
+const scoreArea = document.getElementById("score");
+const questionsTotalArea = document.getElementById("questions-total");
 const checkAnswerButton = document.getElementById("check-answer-button");
 const playAgainButton = document.getElementById("play-again-button");
 const outcome = document.getElementById("outcome");
@@ -22,8 +22,8 @@ let correctAnswer = "", score = questionsAsked = 0, questionsTotal = 5;
 document.addEventListener("DOMContentLoaded", () => {
     fetchQuestion();
     eventListeners();
-    _questionsTotal.textContent = questionsTotal;
-    _score.textContent = score;
+    questionsTotalArea.textContent = questionsTotal;
+    scoreArea.textContent = score;
 })
 
 function eventListeners() {
@@ -82,8 +82,8 @@ function checkCorrectAnswer() {
         } else {
             outcome.innerHTML = `<p><i class = "fas fa-times"></i>Incorrect Answer! <p></p><small><b>Correct answer: </b>${correctAnswer}</small></p>`;
         }
-        
-    } incrementQuestionCount();
+        incrementQuestionCount();
+    } 
 }
 
 function incrementQuestionCount() {
@@ -101,8 +101,8 @@ function incrementQuestionCount() {
 }
 
 function editQuestionCount() {
-    _questionsTotal.textContent = questionsTotal;
-    _score.textContent = score;
+    questionsTotalArea.textContent = questionsTotal;
+    scoreArea.textContent = score;
 }
 
 
