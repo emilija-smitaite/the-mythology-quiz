@@ -112,6 +112,7 @@ function incrementQuestionCount() {
   editQuestionCount();
   if (questionsAsked == questionsTotal) {
     checkAnswerButton.style.display = "none";
+    playAgainButton.style.display = "block";
     outcome.innerHTML += `<p>Your score is ${score}/${questionsTotal}!</p>`;
   } else {
     
