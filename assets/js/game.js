@@ -96,6 +96,7 @@ function incrementQuestionCount() {
     editQuestionCount();
     if(questionsAsked == questionsTotal) {
         checkAnswerButton.style.display = "none";
+        outcome.innerHTML += `<p>Your score is ${score}/${questionsTotal}!</p>`
     } else {
         setTimeout(() => {
             fetchQuestion();
