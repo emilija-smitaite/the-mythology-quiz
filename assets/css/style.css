@@ -17,3 +17,7 @@ h1 {
 .selected {
   background-color: lightgrey;
 }
+
+#play-again-button {
+  display: none;
+}
