@@ -1,5 +1,10 @@
 //https://opentdb.com/api.php?amount=10&category=20&type=multiple
 
+/* Script was created using the following tutorial:
+https://www.youtube.com/watch?v=-cX5jnQgqSM
+I have added some event listeners on my own, added my own styling, 
+adapted some of the functions.
+*/
 //---------------------Variables-------------------------
 let play = document.getElementById("play-button");
 const question = document.getElementById("question-area");
@@ -24,7 +29,7 @@ document.addEventListener("DOMContentLoaded", () => {
     eventListeners();
     questionsTotalArea.textContent = questionsTotal;
     scoreArea.textContent = score;
-})
+});
 
 function eventListeners() {
     checkAnswerButton.addEventListener("click", checkCorrectAnswer);
@@ -91,11 +96,12 @@ function incrementQuestionCount() {
     console.log(questionsAsked);
     console.log(questionsTotal);
     editQuestionCount();
-    if(questionsAsked = questionsTotal) {
-
+    if(questionsAsked == questionsTotal) {
+        console.log("hi from before");
     } else {
         setTimeout(() => {
             fetchQuestion();
+            console.log("hi from timeout");
         }, 300);
     }
 }
