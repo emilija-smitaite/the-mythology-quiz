@@ -95,6 +95,7 @@ function incrementQuestionCount() {
     questionsAsked++;
     editQuestionCount();
     if(questionsAsked == questionsTotal) {
+        checkAnswerButton.style.display = "none";
     } else {
         setTimeout(() => {
             fetchQuestion();
