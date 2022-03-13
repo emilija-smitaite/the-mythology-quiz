@@ -93,15 +93,11 @@ function checkCorrectAnswer() {
 
 function incrementQuestionCount() {
     questionsAsked++;
-    console.log(questionsAsked);
-    console.log(questionsTotal);
     editQuestionCount();
     if(questionsAsked == questionsTotal) {
-        console.log("hi from before");
     } else {
         setTimeout(() => {
             fetchQuestion();
-            console.log("hi from timeout");
         }, 300);
     }
 }
