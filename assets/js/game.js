@@ -24,6 +24,7 @@ let correctAnswer = "",
 //let unusedQuestions = [];
 
 //---------------------Event Listeners-------------------------
+
 document.addEventListener("DOMContentLoaded", () => {
   fetchQuestion();
   eventListeners();
@@ -33,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function eventListeners() {
   checkAnswerButton.addEventListener("click", checkCorrectAnswer);
+  playAgainButton.addEventListener("click", playAgain);
 }
 
 //--------------------------Functions--------------------
@@ -126,3 +128,15 @@ function editQuestionCount() {
   scoreArea.textContent = score;
 }
 
+/* Reset game controls to the beginning of the game way.
+Reset score and question count */
+function playAgain() {
+    score = questionsAsked = 0;
+    playAgainButton.style.display = "none";
+    checkAnswerButton.style.display = "block";
+    checkAnswerButton.disabled = false;
+    editQuestionCount();
+    displayQuestion();
+   //Insert simulation of click event for #play-button
+    
+}
