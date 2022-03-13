@@ -88,7 +88,10 @@ function checkCorrectAnswer() {
             outcome.innerHTML = `<p><i class = "fas fa-times"></i>Incorrect Answer! <p></p><small><b>Correct answer: </b>${correctAnswer}</small></p>`;
         }
         incrementQuestionCount();
-    } 
+    } else {
+        outcome.innerHTML = `<p><i class = "fas fa-question"></i>Select your answer!</p>`;
+        checkAnswerButton.disabled = false;
+    }
 }
 
 function incrementQuestionCount() {
