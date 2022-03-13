@@ -53,7 +53,7 @@ function displayQuestion(data) {
   let incorrectAnswer = data.incorrect_answers;
   let optionsList = incorrectAnswer;
 
-  //Return array of random answer options
+  //Return random array of answer options
   optionsList.splice(Math.floor(Math.random() * (incorrectAnswer.length + 1)), 0, correctAnswer);
 
   question.innerHTML = `${data.question}`;
