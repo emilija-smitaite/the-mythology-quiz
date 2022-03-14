@@ -60,7 +60,7 @@ function displayQuestion(data) {
       .join("")}
     `;
   pickOption();
-  outcome.innerHTML = `<p><i class = "fas fa-question"></i>Select your answer</p>`;
+  outcome.innerHTML = `<p><i class = "fas fa-question"></i> Select your answer</p>`;
 }
 
 //Highlight answer option clicked on and check correct answer
@@ -80,9 +80,9 @@ function checkCorrectAnswer() {
     let pickedAnswer = option.querySelector(".selected span").textContent;
     if (pickedAnswer == correctAnswer) {
       score++;
-      outcome.innerHTML = `<p><i class = "fas fa-check"></i>Correct Answer!</p>`;
+      outcome.innerHTML = `<p><i class = "fas fa-check"></i> Correct Answer!</p>`;
     } else {
-      outcome.innerHTML = `<p><i class = "fas fa-times"></i>Incorrect Answer! <p></p><small><b>Correct answer: </b>${correctAnswer}</small></p>`;
+      outcome.innerHTML = `<p><i class = "fas fa-times"></i> Incorrect Answer! <p></p><small><b>Correct answer: </b>${correctAnswer}</small></p>`;
     }
     incrementQuestionCount();
   }
