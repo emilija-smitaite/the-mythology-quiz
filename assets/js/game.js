@@ -128,16 +128,3 @@ function editQuestionCount() {
   questionsTotalArea.textContent = questionsTotal;
   scoreArea.textContent = score;
 }
-
-/* Reset game controls to the beginning of the game way.
-Reset score and question count */
-function playAgain() {
-    score = questionsAsked = 0;
-    playAgainButton.style.display = "none";
-    checkAnswerButton.style.display = "block";
-    checkAnswerButton.disabled = false;
-    editQuestionCount();
-    displayQuestion();
-   //Insert simulation of click event for #play-button
-    
-}
