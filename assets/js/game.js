@@ -13,7 +13,6 @@ const question = document.getElementById("question-area");
 const option = document.querySelector(".option");
 const scoreArea = document.getElementById("score");
 const questionsTotalArea = document.getElementById("questions-total");
-const checkAnswerButton = document.getElementById("check-answer-button");
 const playAgainButton = document.getElementById("play-again-button");
 const outcome = document.getElementById("outcome");
 
@@ -21,21 +20,13 @@ let correctAnswer = "",
   score = (questionsAsked = 0),
   questionsTotal = 5;
 
-//let unusedQuestions = [];
-
 //---------------------Event Listeners-------------------------
 
 document.addEventListener("DOMContentLoaded", () => {
   fetchQuestion();
-  eventListeners();
   questionsTotalArea.textContent = questionsTotal;
   scoreArea.textContent = score;
 });
-
-function eventListeners() {
-  checkAnswerButton.addEventListener("click", checkCorrectAnswer);
-  playAgainButton.addEventListener("click", playAgain);
-}
 
 //--------------------------Functions--------------------
 
@@ -50,7 +41,6 @@ async function fetchQuestion() {
 
 //Taking API data and formatting it to display a question and answers
 function displayQuestion(data) {
-  checkAnswerButton.disabled = false;
   correctAnswer = data.correct_answer;
   let incorrectAnswer = data.incorrect_answers;
   let optionsList = incorrectAnswer;
@@ -70,25 +60,22 @@ function displayQuestion(data) {
       .join("")}
     `;
   pickOption();
+  outcome.innerHTML = `<p><i class = "fas fa-question"></i>Select your answer</p>`;
 }
 
-//Highlight only the answer option clicked on
+//Highlight answer option clicked on and check correct answer
 function pickOption() {
   option.querySelectorAll("li").forEach((options) => {
     options.addEventListener("click", () => {
-      if (option.querySelector(".selected")) {
-        const activeOption = option.querySelector(".selected");
-        activeOption.classList.remove("selected");
-      }
       options.classList.add("selected");
+      checkCorrectAnswer();
     });
   });
 }
 
-/*On clicking CHECK ANSWER button check whether answer is correct, increment CORRECT score,
+/*Check whether answer is correct, increment CORRECT score,
 give user feedback, stop next question being displayed on click without answer selected */
 function checkCorrectAnswer() {
-  checkAnswerButton.disabled = true;
   if (option.querySelector(".selected")) {
     let pickedAnswer = option.querySelector(".selected span").textContent;
     if (pickedAnswer == correctAnswer) {
@@ -98,11 +85,6 @@ function checkCorrectAnswer() {
       outcome.innerHTML = `<p><i class = "fas fa-times"></i>Incorrect Answer! <p></p><small><b>Correct answer: </b>${correctAnswer}</small></p>`;
     }
     incrementQuestionCount();
-  } 
-   //Handle user clicking CHECK ANSWER button - keep it active until answer is selected
-  else {
-    outcome.innerHTML = `<p><i class = "fas fa-question"></i>Select your answer!</p>`;
-    checkAnswerButton.disabled = false;
   }
 }
 
@@ -111,7 +93,6 @@ function incrementQuestionCount() {
   questionsAsked++;
   editQuestionCount();
   if (questionsAsked == questionsTotal) {
-    checkAnswerButton.style.display = "none";
     playAgainButton.style.display = "block";
     outcome.innerHTML += `<p>Your score is ${score}/${questionsTotal}!</p>`;
   } else {
