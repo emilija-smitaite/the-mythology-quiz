@@ -1,8 +1,10 @@
 * {
-    margin: 0;
-    padding: 0;
-    border: 0;
-  }
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 10px;
+}
+
 /*----------------------General-----------------*/ 
 .center {
         text-align: center;
@@ -49,4 +51,10 @@ https://www.w3schools.com/howto/howto_css_shake_image.asp */
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+/* Transparent nav bar */
+.bg-light {
+  --bs-bg-opacity: 0;
+  background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
 }
