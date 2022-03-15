@@ -58,3 +58,7 @@ https://www.w3schools.com/howto/howto_css_shake_image.asp */
   --bs-bg-opacity: 0;
   background-color: rgba(var(--bs-light-rgb),var(--bs-bg-opacity))!important;
 }
+
+.nav-link:hover {
+  transform:scale(1.1);
+}
