@@ -34,27 +34,28 @@
         </div>
       </div>
     </nav>
-
-    <h1>The Mythology Quiz</h1>
     
-    <!--Display correct answer count and total question count-->
-    <div class="center"><span id="score"></span>/<span id="questions-total"></span></div>
-
-    <!--Display questions and answers-->
-    <div id="game-area" class="center">
-      <p id="question-area">Question</p>
-      <ul class="option"></ul>
-    </div>
-
-    <!--Display whether answer is correct/incorrect-->
-    <div id="outcome">
-    </div>
-
-    <!--Game controls-->
-    <div id="game-controls">
-      <button id="play-again-button" onclick="location.reload();">Play again</button>
-    </div>
-
+    <div id="main-area" class = "center">
+      <h1>The Mythology Quiz</h1>
+      
+      <!--Display correct answer count and total question count-->
+      <div class="center"><span id="score"></span>/<span id="questions-total"></span></div>
+  
+      <!--Display questions and answers-->
+      <div id="game-area" class="center">
+        <p id="question-area">Question</p>
+        <ul class="option"></ul>
+      </div>
+  
+      <!--Display whether answer is correct/incorrect-->
+      <div id="outcome">
+      </div>
+  
+      <!--Game controls-->
+      <div id="game-controls">
+        <button class = "btn btn-outline-light center col-3" id="play-again-button" onclick="location.reload();">PLAY AGAIN</button>
+      </div>
+  </div>
     <script src="assets/js/game.js"></script>
   </body>
 </html>

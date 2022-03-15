@@ -68,5 +68,8 @@ https://www.w3schools.com/howto/howto_css_shake_image.asp */
   height:100%;
   max-width: 60rem;
   border-radius: 10px;
-  
+}
+
+li, span, p, b {
+  font-size: 1.7rem;
 }
