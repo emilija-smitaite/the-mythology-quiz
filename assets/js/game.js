@@ -60,7 +60,7 @@ function displayQuestion(data) {
       .join("")}
     `;
   pickOption();
-  outcome.innerHTML = `<p><i class = "fas fa-question"></i> Select your answer</p>`;
+  outcome.innerHTML = `<p><i class = "fas fa-question"></i><b> Select your answer</b></p>`;
 }
 
 //Highlight answer option clicked on and check correct answer

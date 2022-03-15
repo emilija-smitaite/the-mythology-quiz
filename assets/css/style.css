@@ -11,6 +11,7 @@
         margin: 0 auto;
 }
 
+/*----------------------JS related-----------------*/ 
 .selected {
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 3px;
@@ -19,6 +20,7 @@
 
 #play-again-button {
   display: none;
+  font-size: x-large;
 }
 
 body {
@@ -78,4 +80,13 @@ li, span, p, b {
 
 ul {
   list-style-type: none;
+}
+
+.welcome {
+  padding:10%;
+}
+
+.large {
+  font-size: large;
+  margin: 2%;
 }
