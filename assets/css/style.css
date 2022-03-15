@@ -21,3 +21,10 @@ h1 {
 #play-again-button {
   display: none;
 }
+
+body {
+  background-image: url('../images/atlas.png');;
+  background-color: rgb(246, 248, 250);
+  background-repeat: no-repeat;
+  background-position: top;
+}
