@@ -11,11 +11,6 @@
         margin: 0 auto;
 }
 
-
-h1 {
-    text-align: center;
-}
-
 .selected {
   background-color: lightgrey;
 }
