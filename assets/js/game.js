@@ -100,7 +100,7 @@ function incrementQuestionCount() {
     // Delay for better UX
     setTimeout(() => {
       fetchQuestion();
-    }, 300);
+    }, 600);
   }
 }
 
