@@ -57,3 +57,16 @@ https://www.w3schools.com/howto/howto_css_shake_image.asp */
 .nav-link:hover {
   transform:scale(1.1);
 }
+
+/*  -----------------Main area-----------------------*/
+
+#main-area {
+  background-color: rgba(0, 0, 0, 0.5);
+  color:whitesmoke;
+  padding: 5%;
+  width:100%;
+  height:100%;
+  max-width: 60rem;
+  border-radius: 10px;
+  
+}
