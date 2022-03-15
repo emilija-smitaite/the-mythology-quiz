@@ -15,6 +15,8 @@ const scoreArea = document.getElementById("score");
 const questionsTotalArea = document.getElementById("questions-total");
 const playAgainButton = document.getElementById("play-again-button");
 const outcome = document.getElementById("outcome");
+const result = document.getElementById("result");
+const scoreCount = document.getElementById("score-count");
 
 let correctAnswer = "",
   score = (questionsAsked = 0),
@@ -93,8 +95,16 @@ function incrementQuestionCount() {
   questionsAsked++;
   editQuestionCount();
   if (questionsAsked == questionsTotal) {
-    playAgainButton.style.display = "block";
-    outcome.innerHTML += `<p>Your score is ${score}/${questionsTotal}!</p>`;
+    setTimeout(() => {
+      question.style.display = "none";
+      option.style.display = "none";
+      outcome.style.display = "none";
+      playAgainButton.style.display = "block";
+      result.innerHTML += `<p>Well done on finishing the quiz!</p><p>Your score is ${score}/${questionsTotal}!</p>`;
+    }, 600);
+    scoreCount.style.display = "none";
+    
+    
   } else {
     
     // Delay for better UX
