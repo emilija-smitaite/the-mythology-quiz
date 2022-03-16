@@ -96,6 +96,7 @@ ul {
   background-image: linear-gradient(to bottom right, rgb(77, 74, 68), rgb(192, 192, 190));
   max-width: 50rem;
   border-radius: 5px;
+  color:whitesmoke;
 }
 
 #help-modal-content div {
@@ -105,4 +106,6 @@ ul {
 
 #modal-button {
   margin-top: 5%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color:whitesmoke;
 }
