@@ -90,3 +90,19 @@ ul {
   font-size: large;
   margin: 2%;
 }
+
+/*  -----------------Modal-----------------------*/
+#help-modal-content {
+  background-image: linear-gradient(to bottom right, rgb(77, 74, 68), rgb(192, 192, 190));
+  max-width: 50rem;
+  border-radius: 5px;
+}
+
+#help-modal-content div {
+  font-size: 1.6rem;
+  padding:5%;
+}
+
+#modal-button {
+  margin-top: 5%;
+}
