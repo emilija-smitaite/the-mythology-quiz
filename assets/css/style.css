@@ -5,10 +5,17 @@
   font-size: 10px;
 }
 
+body {
+  background-image: url('../images/atlas.png');;
+  background-color: rgb(246, 248, 250);
+  background-repeat: no-repeat;
+  background-position: top;
+}
+
 /*----------------------General-----------------*/ 
 .center {
-        text-align: center;
-        margin: 0 auto;
+  text-align: center;
+  margin: 0 auto;
 }
 
 /*----------------------JS related-----------------*/ 
@@ -17,17 +24,9 @@
   border-radius: 3px;
 }
 
-
 #play-again-button {
   display: none;
   font-size: large;
-}
-
-body {
-  background-image: url('../images/atlas.png');;
-  background-color: rgb(246, 248, 250);
-  background-repeat: no-repeat;
-  background-position: top;
 }
 
 /*  -----------------Nav bar-------------------------*/
