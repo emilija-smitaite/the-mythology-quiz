@@ -31,10 +31,10 @@
               <a class="nav-link active fs-4" aria-current="page" href="game.html">Play</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active fs-4" href="#">Help</a>
+              <a class="nav-link active fs-4" href="#" data-bs-toggle="modal" data-bs-target="#help-modal" >Help</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active fs-4">Contact</a>
+              <a class="nav-link active fs-4" data-bs-toggle="modal" data-bs-target="#contact-modal">Contact</a>
             </li>
           </ul>
         </div>
@@ -47,9 +47,9 @@
      
       <div class="center">
           <p><a id="play-button" href="game.html" class = "btn btn-outline-light center col-3 large">PLAY</a></p>
-        <p><a id="help-button" href="" class = "btn btn-outline-light center col-3 large" data-bs-toggle="modal"
+        <p><a id="help-button" class = "btn btn-outline-light center col-3 large" data-bs-toggle="modal"
           data-bs-target="#help-modal">HELP</a></p>
-        <p> <a id="contact-button" href="" class = "btn btn-outline-light center col-3 large" data-bs-toggle="modal" 
+        <p> <a id="contact-button" class = "btn btn-outline-light center col-3 large" data-bs-toggle="modal" 
           data-bs-target="#contact-modal">CONTACT</a></p>
        
       </div>
@@ -71,12 +71,13 @@
 
   
 
-  <!-- Modal - Email JS contact form -->
+  <!-- Contact form modal -->
 <div class="modal fade" id="contact-modal" tabindex="-1" aria-labelledby="contact-section-modal" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="contact-modal-content">
       <div class="modal-body lh-lg">
 
+      <!-- Email JS contact form -->  
         <div class="container-fluid">
           <div class="row bg-color-contact">
               <div class="col">
@@ -90,7 +91,7 @@
                           <textarea rows="5" name="projectsummary" id="projectsummary" class="form-control" placeholder="Your message" required></textarea>
                           <div class="form-row text-center">
                               <div class="col">
-                                  <button type="submit" class="btn btn-secondary">Send</button>
+                                  <button type="submit" class="btn btn-secondary mt-3" >Send</button>
                               </div>
                           </div>
                       </form>
