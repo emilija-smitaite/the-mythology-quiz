@@ -4,11 +4,10 @@ Generated API link */
 /* Script was created using the following tutorial:
 https://www.youtube.com/watch?v=-cX5jnQgqSM
 I have added some event listeners on my own, 
-adapted some of the functions,  added my own styling, 
+adapted some of the functions,  added my own styling.
 */
 
 //---------------------Variables-------------------------
-let play = document.getElementById("play-button");
 const question = document.getElementById("question-area");
 const option = document.querySelector(".option");
 const scoreArea = document.getElementById("score");
