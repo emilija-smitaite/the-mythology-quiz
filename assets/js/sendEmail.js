@@ -1,5 +1,7 @@
-function sendMail(event){
- console.log("hi");
+let feedback = document.getElementById("contact-feedback");
+
+function sendMail(event) {
+    
     //Prevent page reload to keep modal active
     event.preventDefault();
 let contactForm = event.target;
@@ -11,10 +13,12 @@ let contactForm = event.target;
     .then(
         function(response) {
             console.log("SUCCESS", response);
+            feedback.innerHTML = `<p class = "text-success">Form submitted succesfully!</p>`
             contactForm.reset();
         }, 
         function(error) {
             console.log("FAILED", error);
+            feedback.innerHTML = `<p class = "text-danger">Sorry, there was an error trying to send your message.</p>`
         });
         return false;
 }
