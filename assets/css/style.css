@@ -18,6 +18,10 @@ body {
   margin: 0 auto;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 /*----------------------JS related-----------------*/ 
 .selected {
   background-color: rgba(0, 0, 0, 0.2);
