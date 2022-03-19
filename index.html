@@ -18,6 +18,7 @@
   <body>
     <!--Navbar taken from Bootstrap-->
     <!--https://getbootstrap.com/docs/5.1/components/navbar/-->
+    <header>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html"><img src="assets/images/medusa.png" alt = "Head of the Medusa" width="100" height="120"></a>
@@ -40,36 +41,36 @@
         </div>
       </div>
     </nav>
-
+  </header>
+  
      <!--Main area-->
+     <section>
     <div id="main-area" class = "center">
       <h1 class = "uppercase center welcome">Welcome to The Mythology Quiz!</h1>
-     
       <div class="center">
           <p><a id="play-button" href="game.html" class = "btn btn-outline-light center col-3 large">PLAY</a></p>
         <p><a id="help-button" class = "btn btn-outline-light center col-3 large" data-bs-toggle="modal"
           data-bs-target="#help-modal">HELP</a></p>
         <p> <a id="contact-button" class = "btn btn-outline-light center col-3 large" data-bs-toggle="modal" 
           data-bs-target="#contact-modal">CONTACT</a></p>
-       
       </div>
     </div>
-    
+  </section> 
 
-<!-- Modal -->
+ <!-- Modals --> 
+<section>
+<!-- Help modal -->
 <div class="modal fade" id="help-modal" tabindex="-1" aria-labelledby="help-section-modal" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content" id="help-modal-content">
       <div class="modal-body lh-lg">
         <p id = "help-section-modal">Pick one of the four answers and find out how much do you know about the legends of the past. <br>
-          Play again to beat your score and learn more from the quiz.</p>
+          Play again to beat your score.</p>
          <p><button type="button" class="btn btn-secondary btn-lg modal-button" data-bs-dismiss="modal">CLOSE</button></p>
       </div>
     </div>
   </div>
 </div>
-
-  
 
   <!-- Contact form modal -->
 <div class="modal fade" id="contact-modal" tabindex="-1" aria-labelledby="contact-section-modal" aria-hidden="true">
@@ -81,9 +82,7 @@
         <div class="container-fluid">
           <div class="row bg-color-contact">
               <div class="col">
-                  <h3 class="contact-heading uppercase text-center">Ideas? Suggestions?</h3>
-                  <h5 class="uppercase text-center" id = "contact-section-modal">Get in touch!</h5>
-        
+                <h3 class="contact-heading uppercase text-center" id = "contact-section-modal">Get in touch!</h3>
                   <div class="center-form">
                       <form onsubmit="sendMail(event)">
                           <input type="text" name="name" id="fullname" class="form-control" placeholder="Name" required />
@@ -91,7 +90,7 @@
                           <textarea rows="5" name="projectsummary" id="projectsummary" class="form-control" placeholder="Your message" required></textarea>
                           <div class="form-row text-center">
                               <div class="col">
-                                  <button type="submit" class="btn btn-secondary mt-3" >Send</button>
+                                  <button type="submit" class="btn btn-secondary btn-lg col-3 mt-3 fs-4" >Send</button>
                               </div>
                           </div>
                       </form>
@@ -105,12 +104,10 @@
     </div>
   </div>
 </div>
+</section>
   
-
-  
-  <script src="assets/js/sendEmail.js"></script>
-  
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+<script src="assets/js/sendEmail.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 
   </body>
