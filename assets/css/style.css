@@ -94,6 +94,12 @@ ul {
   margin: 2%;
 }
 
+@media screen and (min-width: 400px) {
+  #play-button, #help-button, #contact-button {
+    font-size: large;
+  }
+}
+
 /*  -----------------Modal-----------------------*/
 #help-modal-content {
   background-image: linear-gradient(to bottom right, rgb(77, 74, 68), rgb(192, 192, 190));
