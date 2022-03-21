@@ -14,13 +14,13 @@ function sendMail(event) {
     .then(
       function (response) {
         console.log("SUCCESS", response);
-        feedback.innerHTML = `<p class = "text-success">Form submitted succesfully!</p>`;
+        feedback.innerHTML = `<p class = "text-success">Form submitted successfully!</p>`;
         contactForm.reset();
       },
       function (error) {
         console.log("FAILED", error);
         feedback.innerHTML = `<p class = "text-danger">Sorry, there was an error trying to send your message.</p>`;
       }
-    );
+    )
   return false;
 }
