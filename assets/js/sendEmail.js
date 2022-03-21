@@ -21,6 +21,6 @@ function sendMail(event) {
         console.log("FAILED", error);
         feedback.innerHTML = `<p class = "text-danger">Sorry, there was an error trying to send your message.</p>`;
       }
-    )
+    );
   return false;
 }
