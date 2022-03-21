@@ -30,7 +30,7 @@ This is a mythology themed quiz game. The game contains 5 multiple choice questi
   #### **Typography**
   - All the elements use Bootstrap native font stack which adapts to the device. These fonts are familiar to the user, professional and clean looking, a good match to this project where style focus is on the background image.
   #### **Imagery**
-  - Large, background hero image is in line with the theme of the quiz. Both background image and home icon represent antiquity legends and they have an elegant feel to it. I have downloaded background image form [ImgBin](https://imgbin.com/png/RBf9Q0JR/medusa-greek-mythology-png), home icon from [Hiclipart](https://imgbin.com/png/RBf9Q0JR/medusa-greek-mythology-png).
+  - Large, background hero image is in line with the theme of the quiz. Both background image and home icon represent antiquity legends and they have an elegant feel to them. I have downloaded background image form [ImgBin](https://imgbin.com/png/RBf9Q0JR/medusa-greek-mythology-png), home icon from [Hiclipart](https://imgbin.com/png/RBf9Q0JR/medusa-greek-mythology-png).
 
 ## Wireframes
 - Mobile Home page and iPad Game page <br>
@@ -70,49 +70,61 @@ This is a mythology themed quiz game. The game contains 5 multiple choice questi
 - Web Formatter was used to add proper indentation and improve readability on HTML, CSS and JS files.
 
 # Testing
+* I have learned a lot about testing during this project, especially about documenting my testing. For most of the project, I was using commit messages to document testing, at the same time feeling that I shouldn't commit until the new feature is working pretty much how expected. Therefore I don't think that my commit history fully reflects the amount of testing, trial and error that I have gone through during the development process. A lesson to remember for the next project.
 
 ## Testing User Stories from User Experience (UX) Section
 
 #### **First time visitor goals**
 1. As a First Time Visitor, I want to immediately identify the main purpose of the website.
 * Upon entering the site, users are greeted with the main heading. 
-* Background image and home link at the top left corner support the main heading.
+* Background image and home link at the top left corner support the main heading. <br>
 ![Home Page](assets/images/ux-1.PNG)
 2. As a First Time Visitor, I want to easily navigate through the website.
-* Navbar and main section of index.html both offer easy navigation from anywhere in the site.
-* Game can be restarted at any point.
+* Navbar and main section of index.html both offer easy navigation from anywhere on the site.
+* Game can be restarted at any point.<br>
+![Nav bar from the game page](assets/images/ux-2.PNG)
 3. As a First Time Visitor, I want to see Help / How to play section on the home page.
-* Immediately visible in the navbar and the main section of the index.html.
+* Immediately visible in the navbar and the main section of the index.html.<br>
+![Play/Help sections](assets/images/ux-3.PNG)
 4. As a First Time Visitor, I want the website's colour scheme and general feel to reflect the theme of the quiz.
 * Background image is an antiquity period marble sculpture of Atlas holding The World on his shoulders.
-Home button has an image of The Medusa. Both are quite well-known legends.
+* Home button has an image of The Medusa. Both are quite well-known legends.<br>
+![Imagery](assets/images/ux-4.PNG)
 5. As a First Time Visitor, I want to have fun playing.
-* The game is inviting, quick to play, has got interesting questions.
-6. As a First Time Visitor, I want to see my score progress.
-* Scores are updated as it goes.
-7. As a First Time Visitor, I want to game controls to be intuitive.
+* The game is inviting, quick to play, has got interesting questions. <br>
+![Interesting question](assets/images/ux-5.PNG)
+6. As a First Time Visitor, I want to see my score progress. 
+* Scores are updated as it goes.<br>
+![Score update](assets/images/ux-6.PNG)
+7. As a First Time Visitor, I want game controls to be intuitive.
 * On picking an answer, the next question is shown automatically.
-* Once the last question has been answered, the result is displayed, PLAY AGAIN button shows up.
+* Once the last question has been answered, the result is displayed, PLAY AGAIN button shows up.<br>
+![Game controls](assets/images/ux-7.PNG)
 
 #### **Returning Visitor Goals**
 1. As a Returning Visitor, I want to improve my score.
-* Score is displayed at the end of the game and during the game.
+* Score is displayed at the end of the game and during the game.<br>
+![Score](assets/images/ux-8.PNG)
 2. As a Returning Visitor, I want to be able to leave feedback and be assured it has been delivered.
+* Email delivered to my email address. <br>
+![Contact form email](assets/images/contact-email.PNG)
+* Feedback is given for submitted form <br>
+![Contact form feedback](assets/images/contact.PNG)
+* Console.log successful submission <br>
+![Contact form log](assets/images/contact-console.PNG)
  
 #### **Frequent User Goals**
 1. As a Frequent User, I want to replay the quiz and keep learning on the subject.
-* In case of an incorrect answer, the correct one is displayed.
-* At the end of the game, the PLAY AGAIN button is shown.
-* Play link at the nav bar has the same functionality as the PLAY AGAIN button.   
-
+* In case of an incorrect answer, the correct one is displayed. <br>
+![Correct answer](assets/images/ux-9.PNG)
 
 ### The W3C Markup Validator and W3C CSS Validator Services were used to validate every page of the project to ensure there were no syntax errors in the project.
- * HTML validator results ![Home Page](assets/images/html-validator-index.PNG) ![Game Page](assets/images/html-validator-game.PNG) 
+ * HTML validator results ! <br> [Home Page](assets/images/html-validator-index.PNG) <br> ![Game Page](assets/images/html-validator-game.PNG) <br>
  * CSS validator results ![CSS validator results](assets/images/css-validator.PNG)
 
 ### Lighthouse was used to measure performance.
-* Lighthouse report for desktop ![Desktop](assets/images/lighthouse-desktop-results.PNG) 
-* Lighthouse report for mobile ![Mobile](assets/images/lighthouse-results.PNG)
+* Lighthouse report for desktop <br> ![Desktop](assets/images/lighthouse-desktop-results.PNG) 
+* Lighthouse report for mobile <br> ![Mobile](assets/images/lighthouse-results.PNG)
  - Addition of the meta description tag made a significant improvement to the score.
  - Another issue was with navbar links having no href attribute since I have used Bootstrap classes to add modal functionality to the navbar. This was solved by leaving empty href tags in the navbar.
 
@@ -121,7 +133,8 @@ Home button has an image of The Medusa. Both are quite well-known legends.
 ![JSHint report](assets/images/JSHint-game.PNG)
 * Screenshot from game.js <br>
 ![JSHint report comment](assets/images/game.js-validator.PNG)
-* JShint report for sendEmail.js <br> ![JShint report](assets/images/JSHint-sendEmail.PNG)
+* JShint report for sendEmail.js <br>
+ ![JShint report](assets/images/JSHint-sendEmail.PNG)
 
 ### Chrome developer tools 
 * Used to test responsiveness and functionality on various devices.
@@ -143,19 +156,19 @@ Home button has an image of The Medusa. Both are quite well-known legends.
 ### Quiz game
 1. Question and answer options are displayed.
 - Question is loaded from the external API.
-- Answer options are loaded and displayed in an ordered list. 
+- Answer options are loaded and displayed in an ordered list. <br> 
 ![Quiz Start](assets/images/quiz-1.PNG)
 2. On clicking one of the options, check the answer, give feedback display the next question.
 - In the case of the correct answer, the feedback message "Correct!" is displayed and the next answer is shown.
-- In case of an incorrect answer, the feedback message "Incorrect!" is displayed, the correct answer shown briefly, next answer shown.
+- In case of an incorrect answer, the feedback message "Incorrect!" is displayed, the correct answer shown briefly, next answer shown. <br> 
 ![Quiz Start](assets/images/quiz-2.PNG)
 3. Score is updating while playing.
-- Score is updating accordingly for correct/incorrect answers.
+- Score is updating accordingly for correct/incorrect answers.  <br> 
 ![Quiz Start](assets/images/quiz-3.PNG)
 4. Give feedback on finishing the quiz.
 - "Well done on finishing the quiz!" is displayed once the last question is answered.
 - Total score is displayed.
-- PLAY AGAIN Button is displayed, once clicked, the game restarts.
+- PLAY AGAIN Button is displayed, once clicked, the game restarts.  <br> 
 ![Quiz Start](assets/images/quiz-4.PNG)
 
 ## Further testing
@@ -199,7 +212,7 @@ By forking the GitHub Repository we make a copy of the original repository on ou
 
 ## Media 
 * [Background image](https://www.hiclipart.com/free-transparent-background-png-clipart-bbczb/download) Image is freely available to download.
-* [Home icon] (https://imgbin.com/png/RBf9Q0JR/medusa-greek-mythology-png) Image is freely available to download.
+* [Home icon](https://imgbin.com/png/RBf9Q0JR/medusa-greek-mythology-png) Image is freely available to download.
 
 ## Acknowledgements
 * My mentors Spencer Barriball and Adegbenga Adeye for encouragement and support.
